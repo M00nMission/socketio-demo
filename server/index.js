@@ -1,7 +1,7 @@
 import { Server } from 'socket.io';
 import { v4 as uuid } from 'uuid';
 
-const io = new Server(5000, {
+const io = new Server(process.env.PORT || 8080, {
     cors: {
         origin: '*',
     },

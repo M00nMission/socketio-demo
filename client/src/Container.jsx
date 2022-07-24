@@ -11,7 +11,7 @@ export default function Container() {
     const [socket, setSocket] = useState(null);
 
     useEffect(() => {
-        const newSocket = io('http://localhost:5000');
+        const newSocket = io('https://arcane-falls-12136.herokuapp.com/');
         setSocket(newSocket);
         setUser(null);
         return () => newSocket.close();
